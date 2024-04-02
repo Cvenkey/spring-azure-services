@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/message")
     public String hello(){
-        return "application deployed successfully in Azure Cloud";
+        return "Congratulations! Application deployed successfully in Azure Cloud";
     }
 }
