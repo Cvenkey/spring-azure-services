@@ -1,4 +1,4 @@
-package com.practice.cloud.aws;
+package com.practice.cloud.azure;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -8,7 +8,7 @@
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.practice.cloud.aws</groupId>
+	<groupId>com.practice.cloud.azure</groupId>
 	<artifactId>spring-azure-services</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-azure-services</name>
