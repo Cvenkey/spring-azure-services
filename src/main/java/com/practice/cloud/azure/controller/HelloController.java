@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/message")
     public String hello(){
-        return "Pinservice deployed successfully in Azure Cloud";
+        return "Pinservice deployed successfully in Azure Cloud with docker-compose";
     }
 }
