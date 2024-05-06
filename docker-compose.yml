@@ -24,5 +24,6 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://192.168.99.100:3306/pin_services?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     ports:
       - "8080:8080"
+
 volumes:
   dbdata:
