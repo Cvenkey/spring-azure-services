@@ -9,7 +9,6 @@ import com.practice.cloud.azure.repository.UserRepository;
 import com.practice.cloud.azure.request.Pincode;
 import com.practice.cloud.azure.request.UserPincodes;
 import com.practice.cloud.azure.response.APIResponse;
-import com.practice.cloud.azure.response.PostOffice;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import javax.transaction.Transactional;
+import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.temporal.TemporalUnit;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -29,8 +30,6 @@ public class PinService {
     private final ApplicationConfig applicationConfig;
     private final PincodeRepository pincodeRepository;
     private final UserRepository userRepository;
-
-
 
     @Autowired
     public PinService(ApplicationConfig applicationConfig, PincodeRepository pincodeRepository, UserRepository userRepository) {
@@ -44,6 +43,8 @@ public class PinService {
         RestTemplate restTemplate;
         try {
             restTemplate = new RestTemplateBuilder().build();
+
+
             String json = restTemplate.getForObject(applicationConfig.getUrl() + pin, String.class);
             ObjectMapper mapper = new ObjectMapper();
             apiResponse = mapper.readValue(json, APIResponse[].class)[0];

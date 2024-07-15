@@ -1,5 +1,6 @@
 package com.practice.cloud.azure.model;
 
+import com.practice.cloud.azure.config.ToUpperCase;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
